@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{wellcome}} <br />
+      <strong> {{name}}</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+  <ion-buttons>
+    <ion-button (click)="logout()"> Cerrar sesión </ion-button>
+  </ion-buttons>
+</ion-content>

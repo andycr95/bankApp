@@ -1,0 +1,35 @@
+<ion-content>
+  <form [formGroup]="transacForm" (ngSubmit)="createTransaction()">
+    <ion-item-group>
+      <ion-item>
+        <ion-label position="floating">Monto</ion-label>
+        <ion-input formControlName="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Moneda</ion-label>
+        <ion-input disabled formControlName="currency"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cuenta origen</ion-label>
+        <ion-select
+          formControlName="origin_id"
+          placeholder="Selecciona una opción"
+        >
+          <ion-select-option *ngFor="let item of accounts" [value]="item._id"
+            >{{item.number + ' - ' + item.type}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cuenta destino</ion-label>
+        <ion-input disabled formControlName="account"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-button [disabled]="!transacForm.valid" type="submit" expand="block"
+      >Pagar</ion-button
+    >
+    <ion-button type="submit" [routerLink]="['/']" color="danger" expand="block"
+      >Cancelar</ion-button
+    >
+  </form>
+</ion-content>

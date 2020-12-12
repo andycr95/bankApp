@@ -1,0 +1,37 @@
+ion-content{
+    text-align: center;
+
+    h1{
+        font-size: 40px;
+        margin-top: 30%;
+        color: rgb(149, 178, 255)
+    }
+
+    strong{
+        color: #ff3d00;
+    }
+
+    ion-item-group{
+        padding-right: 20px;
+    }
+
+    ion-button{
+        margin: 20px 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a{
+        color: #ff3d00;
+    }
+}
+
+ion-footer{
+    ion-row{
+        div{
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+}

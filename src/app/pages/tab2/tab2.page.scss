@@ -1,0 +1,53 @@
+$primaryColor: #FF3D00;
+
+
+ion-header {
+    height: 30%;
+
+    ion-toolbar{
+        height: 100%;
+        width: 100%;
+        background-color: #cacaca;
+        --border-width: 0 0 0;
+
+        ion-title {
+            height: 100%;
+            margin: 0 auto;
+            text-align: start;
+            position: relative;
+            font-size: 48px;
+            color: $primaryColor;
+            font-family: 'system-ui';
+            letter-spacing: -29;
+            font-weight: 100;
+        }
+
+        @media (min-width: 600px) {
+            ion-title {
+                padding: 5% 0 0 15px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            ion-title {
+                padding: 20% 0 0 15px;
+            }
+        }
+        
+    }
+}
+
+ion-content{
+    text-align: center;
+    ion-buttons{
+        justify-content: center;
+        margin-top: 20px;
+
+        ion-button {
+            border: 1px solid  #ff3d00;
+            border-radius: 5px;
+            font-size: 30px;
+            color: #ff3d00;
+        }
+    }
+}

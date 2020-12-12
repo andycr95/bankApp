@@ -1,0 +1,90 @@
+$primaryColor: #FF3D00;
+
+ion-header {
+    height: 30%;
+
+    ion-toolbar{
+        height: 100%;
+        width: 100%;
+        background-color: #cacaca;
+    
+        ion-back-button {
+            position: absolute;
+            margin-top: 5%;
+        }
+        .toolbar-row{
+            padding: 20% 20px 0 20px;
+
+            ion-col{
+                padding: 0;
+
+                ion-row{
+                    padding: 0;
+                    text-align: start;
+
+                    .title{
+                        margin: 0;
+                        font-size: 20px;
+                        color: $primaryColor;
+                        font-family: 'system-ui';
+                        letter-spacing: -29;
+                        font-weight: 600;
+                    }
+        
+                    .number-account{
+                        margin: 0;
+                        font-size: 16px;
+                        color: rgb(140, 140, 140);
+                        font-family: 'system-ui';
+                        letter-spacing: -29;
+                        font-weight: 600;
+                    }
+        
+                    .type-account{
+                        width: 100%;
+                        margin: 0;
+                        font-size: 14px;
+                        color: rgb(140, 140, 140);
+                        font-family: 'system-ui';
+                        letter-spacing: -29;
+                        font-weight: 600;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .cont-balance{
+            ion-label{
+                padding: 20px 0 0 0;
+                margin: 0;
+                position: relative;
+                bottom: -20px;
+            }
+        }
+
+        .cash{
+            margin: 0;
+            font-size: 20px;
+            color: $primaryColor;
+            font-family: 'system-ui';
+            letter-spacing: -29;
+            font-weight: 600;
+        }
+    }
+}
+
+ion-content{
+    .cont-text{
+        padding: 0;
+        text-align: start;
+        h2 {
+            margin-left: 15px;
+            font-family: 'system-ui';
+            font-weight: 400;
+            color: #746A96;
+        }
+    }
+}

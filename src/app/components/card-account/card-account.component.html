@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card">
+    <ion-row>
+      <ion-col>
+        <p class="title">{{ account.name }}</p></ion-col
+      >
+      <ion-col class="cont-icon-account">
+        <img
+          class="icon-account"
+          src="/assets/img/accounticon.svg"
+          alt="icon-account"
+        />
+      </ion-col>
+    </ion-row>
+    <p>{{ account.type }}</p>
+    <ion-row>
+      <ion-col>
+        <p>{{ account.number }}</p>
+      </ion-col>
+      <ion-col>
+        <ion-row><p>Saldo disponible</p> </ion-row>
+        <ion-row
+          ><p class="cash">
+            <strong>{{ account.balance | currency }}</strong>
+          </p></ion-row
+        >
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="cont-detail">
+        <a (click)="goToDetails(account._id, router)" class="detail"
+          >ver detalle y movimientos</a
+        >
+      </ion-col>
+    </ion-row>
+  </div>
+</div>

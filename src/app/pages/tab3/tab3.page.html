@@ -1,0 +1,16 @@
+<ion-content color="dark" [fullscreen]="true" *ngIf="!loading">
+  <ion-title>
+    Clima -
+    <strong> {{city}}</strong>
+  </ion-title>
+  <ion-label>{{ type | titlecase }}</ion-label>
+  <ion-row>
+    <ion-col class="cont-temp">
+      <h1>{{weather.main.temp | number: '1.0-0'}}º</h1>
+    </ion-col>
+  </ion-row>
+  <ion-label
+    >Max:{{weather.main.temp_max | number: '1.0-0'}}º
+    Min:{{weather.main.temp_min | number: '1.0-0'}}º</ion-label
+  >
+</ion-content>

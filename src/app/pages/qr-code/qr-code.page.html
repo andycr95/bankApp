@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button>Atras</ion-back-button>
+    </ion-buttons>
+    <ion-title>Codigo QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ngx-qrcode
+      [elementType]="elementType"
+      [value]="value"
+      [width]="400"
+      errorCorrectionLevel="L"
+    >
+    </ngx-qrcode>
+  </div>
+</ion-content>

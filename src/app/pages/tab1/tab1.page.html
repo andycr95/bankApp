@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{wellcome}} <br />
+      <strong> {{name}}</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-row>
+    <ion-col class="cont-text">
+      <h2>Cuentas</h2>
+    </ion-col>
+    <ion-col class="cont-icon">
+      <ion-icon
+        [routerLink]="['/create-account']"
+        name="add-outline"
+      ></ion-icon>
+    </ion-col>
+  </ion-row>
+  <app-card-account
+    *ngFor="let item of accounts"
+    [account]="item"
+    [goToDetails]="goToDetails"
+  ></app-card-account>
+</ion-content>

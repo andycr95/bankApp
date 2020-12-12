@@ -1,0 +1,60 @@
+$primaryColor: #FF3D00;
+
+.container{
+    width: 100%;
+    height: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    font-family: 'system-ui';
+
+    .card{
+        background-color: #fff;
+        width: 100%;
+        height: 100px;
+        padding: 20px 10px;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px;
+
+        p{
+            font-size: 14px;
+            margin: 2px;
+        }
+
+        .title{
+            color: #000000;
+            padding-top: 3%;
+        }
+
+        .cash{
+            color: #000000;
+        }
+
+        .cont-detail{
+            text-align: center;
+            margin-top: 10px;
+
+            .detail{
+                color: $primaryColor;
+                font-size: 12px;
+            }
+        }
+
+        .danger{
+            color: #ff0000;
+        }
+
+        .success{
+            color: rgb(38, 207, 97)
+        }
+
+        ion-row{
+            margin: 0;
+            padding: 0;
+
+            ion-col{
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cobros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-row *ngIf="!form">
+    <ion-col class="cont-text">
+      <h2>Cobros</h2>
+    </ion-col>
+    <ion-col class="cont-icon">
+      <ion-icon (click)="showForm();" name="add-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="!form">
+    <ion-col class="cont-text">
+      <app-card-payment
+        *ngFor="let item of payments"
+        [payment]="item"
+        [goToQr]="goToQr"
+      ></app-card-payment>
+    </ion-col>
+  </ion-row>
+  <form *ngIf="form" [formGroup]="paymentForm">
+    <ion-item-group>
+      <ion-item>
+        <ion-label position="floating">Monto</ion-label>
+        <ion-input formControlName="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cuenta</ion-label>
+        <ion-select
+          formControlName="account_id"
+          placeholder="Selecciona una opción"
+        >
+          <ion-select-option *ngFor="let item of accounts" [value]="item._id"
+            >{{item.number + ' - ' + item.type}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Moneda</ion-label>
+        <ion-select
+          formControlName="currency"
+          placeholder="Selecciona una opción"
+        >
+          <ion-select-option value="USD"
+            >Dolar Estadounidense</ion-select-option
+          >
+          <ion-select-option value="CO">Pesos colombia</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
+  </form>
+</ion-content>
+
+<ion-footer *ngIf="form">
+  <ion-button (click)="createPayment();" type="submit" expand="block"
+    >Guardar</ion-button
+  >
+  <ion-button (click)="showForm();" color="danger" expand="block"
+    >Cancelar</ion-button
+  >
+</ion-footer>

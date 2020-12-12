@@ -1,0 +1,40 @@
+$primaryColor: #FF3D00;
+ion-content{
+        background-color: #cacaca;
+        text-align: center;
+
+        ion-title {
+            height: 60px;
+            margin: 20% 10px 0 0;
+            padding: 20px 0 0 0;
+            position: relative;
+            color: #000000;
+            font-size: 30px;
+            font-family: 'system-ui';
+            letter-spacing: -29;
+            font-weight: 100;
+
+            strong{
+                color: $primaryColor;
+            }
+        }
+
+        .cont-temp{
+            padding: 0;
+            text-align: center;
+            h1{
+                font-size: 70px;
+                margin-top: 0;
+                color: $primaryColor;
+                margin: 0;
+            }
+        }
+
+
+        ion-label{
+            font-size: 16px;
+            margin: 20px 0 0 0;
+            position: relative;
+            font-weight: 400;
+        }
+    }
